@@ -1,0 +1,25 @@
+{
+  "name": "coding-exercise-derickbailey",
+  "version": "0.0.1",
+  "description": "hockey league ranking",
+  "main": "leagueRank/index.js",
+  "scripts": {
+    "test": "grunt specs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/derickbailey/coding-exercise-derickbailey.git"
+  },
+  "author": "Derick Bailey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/derickbailey/coding-exercise-derickbailey/issues"
+  },
+  "homepage": "https://github.com/derickbailey/coding-exercise-derickbailey#readme",
+  "devDependencies": {
+    "grunt": "1.0.2",
+    "grunt-contrib-jshint": "1.1.0",
+    "grunt-contrib-watch": "1.0.0",
+    "grunt-jasmine-nodejs": "1.6.0"
+  }
+}
