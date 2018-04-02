@@ -20,12 +20,29 @@ describe("league rank calculator", () => {
     });
   });
 
-  describe("when a team has played multiple games", () => {
-    it("should sum the ranked points for all games");
-  });
+  describe("when three teams have played two games each", () => {
+    var leagueRank;
 
-  describe("when multiple teams have played one or more games", () => {
-    it("should report all ranked game points for all teams");
+    beforeEach(() => {
+      const rankedGames = dataHelpers.threeTeamsThreeGames();
+      const calculator = new LeaguePointsCalculator(rankedGames);
+      leagueRank = calculator.sumUp();
+    });
+
+    it("should sum the ranked points for Team A", () => {
+      const team1 = leagueRank["Team A"];
+      expect(team1.leaguePoints).toBe(4);
+    });
+
+    it("should sum the ranked points for Team B", () => {
+      const team1 = leagueRank["Team B"];
+      expect(team1.leaguePoints).toBe(0);
+    });
+
+    it("should sum the ranked points for Team C", () => {
+      const team1 = leagueRank["Team C"];
+      expect(team1.leaguePoints).toBe(4);
+    });
   });
 
 });

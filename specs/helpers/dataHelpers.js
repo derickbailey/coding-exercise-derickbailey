@@ -76,11 +76,56 @@ function oneRankedGame(){
   }];
 }
 
+function threeTeamsThreeGames(){
+  return [
+    {
+      team1: {
+        name: "Team A",
+        score: 1,
+        rankPoints: 3
+      },
+
+      team2: {
+        name: "Team B",
+        score: 0,
+        rankPoints: 0
+      }
+    },
+    {
+      team1: {
+        name: "Team A",
+        score: 4,
+        rankPoints: 1
+      },
+
+      team2: {
+        name: "Team C",
+        score: 4,
+        rankPoints: 1
+      }
+    },
+    {
+      team1: {
+        name: "Team B",
+        score: 2,
+        rankPoints: 0
+      },
+
+      team2: {
+        name: "Team C",
+        score: 4,
+        rankPoints: 3
+      }
+    },
+  ];
+}
+
 module.exports = {
   oneGame,
   twoGames,
   team1Wins,
   team2Wins,
   tiedGame,
-  oneRankedGame
+  oneRankedGame,
+  threeTeamsThreeGames
 };
