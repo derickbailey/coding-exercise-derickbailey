@@ -3,6 +3,23 @@ The Problem
 We want you to create a command-line application that will calculate the
 ranking table for a hockey league.
 
+Running My App
+--------------
+To run the app, you'll need Node.js v8.
+
+Clone the repository, and run `npm install` from the project
+root to install the needed dependencies. Then from the project
+root, you can run the simple command line shell script to
+execute the program and read your sample file.
+
+For Mac / Linux:
+
+`./leagueRank <filename>`
+
+For Windows:
+
+`leagueRank.cmd <filename>`
+
 Input/output
 ------------
 The input and output will be text. Your solution should parse the provided
