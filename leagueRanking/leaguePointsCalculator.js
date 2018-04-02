@@ -1,12 +1,12 @@
 "use strict";
 
-class TeamRankCalculator {
+class LeaguePointsCalculator {
 
   constructor(rankedGames){
     this.games = rankedGames;
   }
 
-  rank(){
+  sumUp(){
     return this.games.reduce((rankedTeams, game) => {
       const team1 = this.findOrCreateRankedTeam(rankedTeams, game.team1);
       rankedTeams[team1.name] = team1;
@@ -32,4 +32,4 @@ class TeamRankCalculator {
 
 }
 
-module.exports = TeamRankCalculator;
+module.exports = LeaguePointsCalculator;

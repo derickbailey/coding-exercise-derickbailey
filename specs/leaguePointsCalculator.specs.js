@@ -1,7 +1,7 @@
 "use strict";
 
 const dataHelpers = require("./helpers/dataHelpers");
-const LeagueRankCalculator = require("../leagueRanking/leagueRankCalculator");
+const LeaguePointsCalculator = require("../leagueRanking/leaguePointsCalculator");
 
 describe("league rank calculator", () => {
   
@@ -10,8 +10,8 @@ describe("league rank calculator", () => {
 
     beforeEach(() => {
       const rankedGames = dataHelpers.oneRankedGame();
-      const calculator = new LeagueRankCalculator(rankedGames);
-      leagueRank = calculator.rank();
+      const calculator = new LeaguePointsCalculator(rankedGames);
+      leagueRank = calculator.sumUp();
     });
 
     it("should report that game's ranked points for the team", () => {
