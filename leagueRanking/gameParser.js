@@ -11,8 +11,9 @@ class TeamParser {
     const teamLines = streamData.split("\n");
 
     return teamLines.reduce((games, row) => {
-      const teamList = row.split(",").map(this.parseTeam);
+      if (row.trim() === "") { return games; }
 
+      const teamList = row.split(",").map(this.parseTeam);
       const game = {
         team1: teamList[0],
         team2: teamList[1]
