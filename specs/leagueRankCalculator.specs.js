@@ -38,13 +38,13 @@ describe("league rank calculator", () => {
 
     it("should rank the first team in first place", () => {
       const team = rankedTeams[0];
-      expect(team.name).toBe("Team B");
+      expect(team.name).toBe("Team A");
       expect(team.rank).toBe(1);
     });
 
     it("shoud rank the second team as tied in first place", () => {
       const team = rankedTeams[1];
-      expect(team.name).toBe("Team A");
+      expect(team.name).toBe("Team B");
       expect(team.rank).toBe(1);
     });
 

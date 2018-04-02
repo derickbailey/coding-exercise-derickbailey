@@ -42,6 +42,14 @@ class LeagueRankCalculator {
       return -1;
     }
 
+    if (team1.name < team2.name) {
+      return 1;
+    }
+
+    if (team1.name > team2.name) {
+      return -1;
+    }
+
     return 0;
   }
 
