@@ -18,6 +18,52 @@ function twoGames(){
   return r;
 }
 
+function team1Wins(){
+  return [{
+    team1: {
+      name: "Team A",
+      score: 3
+    },
+
+    team2: {
+      name: "Team B",
+      score: 2
+    }
+  }];
+}
+
+function team2Wins(){
+  return [{
+    team1: {
+      name: "Team A",
+      score: 0
+    },
+
+    team2: {
+      name: "Team B",
+      score: 2
+    }
+  }];
+}
+
+function tiedGame(){
+  return [{
+    team1: {
+      name: "Team A",
+      score: 1
+    },
+
+    team2: {
+      name: "Team B",
+      score: 1
+    }
+  }];
+}
+
 module.exports = {
-  oneGame, twoGames
+  oneGame,
+  twoGames,
+  team1Wins,
+  team2Wins,
+  tiedGame
 };
