@@ -1,3 +1,5 @@
+const nameScoreSplit = RegExp(/(.+)(\d+)/);
+
 class TeamParser {
 
   constructor(stream){
@@ -36,10 +38,15 @@ class TeamParser {
   }
 
   parseTeam(teamData){
-    return {
-      name: teamData,
-      score: 1
+    const parts = nameScoreSplit.exec(teamData);
+    if (!parts){ return {}; }
+
+    const team = {
+      name: parts[1].trim(),
+      score: parseInt(parts[2], 10)
     };
+
+    return team;
   }
 
 }

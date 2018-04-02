@@ -23,7 +23,7 @@ describe("team parser", () => {
     it ("should produce team b with the correct score", () => {
       const team = result[1];
       expect(team.name).toBe("Team B");
-      expect(team.score).toBe(0);
+      expect(team.score).toBe(2);
     });
   });
 
