@@ -120,6 +120,57 @@ function threeTeamsThreeGames(){
   ];
 }
 
+function twoTeamsWithLeaguePoints(){
+  return {
+    "Team B": {
+      name: "Team B",
+      leaguePoints: 0
+    },
+    "Team A": {
+      name: "Team A",
+      leaguePoints: 3
+    }
+  };
+}
+
+function twoTeamsWithTiedLeaguePoints(){
+  return {
+    "Team B": {
+      name: "Team B",
+      leaguePoints: 3
+    },
+    "Team A": {
+      name: "Team A",
+      leaguePoints: 3
+    },
+    "Team C": {
+      name: "Team C",
+      leaguePoints: 3
+    }
+  };
+}
+
+function fourTeamsWithLeaguePoints(){
+  return {
+    "Team A": {
+      name: "Team A",
+      leaguePoints: 4
+    },
+    "Team B": {
+      name: "Team B",
+      leaguePoints: 4
+    },
+    "Team C": {
+      name: "Team C",
+      leaguePoints: 2
+    },
+    "Team D": {
+      name: "Team D",
+      leaguePoints: 6
+    }
+  };
+}
+
 module.exports = {
   oneGame,
   twoGames,
@@ -127,5 +178,8 @@ module.exports = {
   team2Wins,
   tiedGame,
   oneRankedGame,
-  threeTeamsThreeGames
+  threeTeamsThreeGames,
+  twoTeamsWithLeaguePoints,
+  twoTeamsWithTiedLeaguePoints,
+  fourTeamsWithLeaguePoints
 };
