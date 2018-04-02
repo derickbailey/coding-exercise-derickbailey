@@ -60,10 +60,27 @@ function tiedGame(){
   }];
 }
 
+function oneRankedGame(){
+  return [{
+    team1: {
+      name: "Team A",
+      score: 1,
+      rankPoints: 3
+    },
+
+    team2: {
+      name: "Team B",
+      score: 0,
+      rankPoints: 0
+    }
+  }];
+}
+
 module.exports = {
   oneGame,
   twoGames,
   team1Wins,
   team2Wins,
-  tiedGame
+  tiedGame,
+  oneRankedGame
 };

@@ -1,5 +1,5 @@
 "use strict";
-const calculator = require("../leagueRanking/gameRankCalculator");
+const GameRankCalculator = require("../leagueRanking/gameRankCalculator");
 const dataHelpers = require("./helpers/dataHelpers");
 
 describe("game rank calculator", () => {
@@ -9,7 +9,8 @@ describe("game rank calculator", () => {
 
     beforeEach(() => {
       const games = dataHelpers.team1Wins();
-      const rankedGames = calculator.rankGames(games);
+      const calculator = new GameRankCalculator(games);
+      const rankedGames = calculator.rankGames();
       rankedGame = rankedGames[0];
     });
 
@@ -28,7 +29,8 @@ describe("game rank calculator", () => {
 
     beforeEach(() => {
       const games = dataHelpers.team2Wins();
-      const rankedGames = calculator.rankGames(games);
+      const calculator = new GameRankCalculator(games);
+      const rankedGames = calculator.rankGames();
       rankedGame = rankedGames[0];
     });
 
@@ -47,7 +49,8 @@ describe("game rank calculator", () => {
 
     beforeEach(() => {
       const games = dataHelpers.tiedGame();
-      const rankedGames = calculator.rankGames(games);
+      const calculator = new GameRankCalculator(games);
+      const rankedGames = calculator.rankGames();
       rankedGame = rankedGames[0];
     });
 
