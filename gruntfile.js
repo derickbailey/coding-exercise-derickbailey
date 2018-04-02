@@ -20,16 +20,12 @@ module.exports = function(grunt) {
       }
     },
 
-    jshint: {
+    eslint: {
       options: {
-        jshintrc: ".jshintrc"
+        configFile: "./eslint.json"
       },
-      specs: {
-        src: ["specs/**/*.js"]
-      },
-      leagueRanking: {
-        src: ["leagueRanking/**/*.js"]
-      }
+      specs: ["specs/**/*.js"],
+      leagueRanking: ["leagueRanking/**/*.js"]
     },
 
     watch: {
@@ -41,9 +37,9 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks("grunt-jasmine-nodejs");
-  grunt.loadNpmTasks("grunt-contrib-jshint");
+  grunt.loadNpmTasks("grunt-eslint");
   grunt.loadNpmTasks("grunt-contrib-watch");
 
-  grunt.registerTask("specs", ["jshint", "jasmine_nodejs"]);
+  grunt.registerTask("specs", ["eslint", "jasmine_nodejs"]);
   grunt.registerTask("default", ["watch"]);
 };

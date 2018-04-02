@@ -1,4 +1,7 @@
-{ "name": "coding-exercise-derickbailey", "version": "0.0.1", "description": "hockey league ranking",
+{
+  "name": "coding-exercise-derickbailey",
+  "version": "0.0.1",
+  "description": "hockey league ranking",
   "main": "leagueRank/index.js",
   "scripts": {
     "test": "grunt specs"
@@ -17,6 +20,7 @@
     "grunt": "1.0.2",
     "grunt-contrib-jshint": "1.1.0",
     "grunt-contrib-watch": "1.0.0",
+    "grunt-eslint": "20.1.0",
     "grunt-jasmine-nodejs": "1.6.0"
   },
   "engines": {

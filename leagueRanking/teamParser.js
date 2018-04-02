@@ -6,12 +6,11 @@ class TeamParser {
 
   async getTeams(cb){
     const streamData = await this.getStreamData();
-    
     const teamLines = streamData.split("\n");
 
     const teams = teamLines.reduce((teams, row) => {
-      const teamList = row.split(",");
-      teams.push[{}];
+      const teamList = row.split(",").map(this.parseTeam);
+      teamList.forEach((team) => teams.push(team));
       return teams;
     }, []);
 
@@ -34,6 +33,13 @@ class TeamParser {
         rej(err);
       });
     });
+  }
+
+  parseTeam(teamData){
+    return {
+      name: teamData,
+      score: 1
+    };
   }
 
 }
